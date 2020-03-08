@@ -11,7 +11,7 @@ This is a repository of Japanese BERT trained on [Aozora Bunko](https://www.aozo
 
 # Pretrained models
 
-After pre-tokenization, texts are tokenized with [subword-nmt](https://github.com/rsennrich/subword-nmt). Final vocab size is 32k.
+After pre-tokenization, texts are tokenized by [subword-nmt](https://github.com/rsennrich/subword-nmt). Final vocab size is 32k.
 
 ## BERT-base
 ### Trained on Aozora Bunko (6M sentences)
@@ -20,7 +20,7 @@ After pre-tokenization, texts are tokenized with [subword-nmt](https://github.co
 * BERT-base_aozora_unidic_bpe-32k_1.4m.tar.xz
 * BERT-base_aozora_unidic_bpe-32k_2m.tar.xz
 
-### Pre-tokenized by [SudachiPy](https://github.com/WorksApplications/SudachiPy) with SudachiDict_core-20191224 and MeCab with UniDic-qkana_1603
+#### Pre-tokenized by [SudachiPy](https://github.com/WorksApplications/SudachiPy) with SudachiDict_core-20191224 and MeCab with UniDic-qkana_1603
 
 * BERT-base_aozora_sudachipy-unidic_bpe-32k_1.4m.tar.xz
 * BERT-base_aozora_sudachipy-unidic_bpe-32k_2m.tar.xz
