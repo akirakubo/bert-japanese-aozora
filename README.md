@@ -24,37 +24,37 @@ After pre-tokenization, texts are tokenized by [subword-nmt](https://github.com/
 ### Trained on Aozora Bunko (6M sentences)
 
 #### Pre-tokenized by [MeCab](https://taku910.github.io/mecab/) with [unidic-cwj-2.3.0](https://unidic.ninjal.ac.jp/download#unidic_bccwj) and [UniDic-qkana_1603](https://unidic.ninjal.ac.jp/download_all#unidic_qkana)
-* [`BERT-base_aozora_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1Ew_2WpA60CUmLvEMaRPyTvVlss699u5c)
-* [`BERT-base_aozora_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1lvE4sSu6lbm9Ih8JjT_GR1F71LqwVrwj)
+* 1.4M steps: [`BERT-base_aozora_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1Ew_2WpA60CUmLvEMaRPyTvVlss699u5c)
+* 2M steps: [`BERT-base_aozora_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1lvE4sSu6lbm9Ih8JjT_GR1F71LqwVrwj)
 
 #### Pre-tokenized by [SudachiPy](https://github.com/WorksApplications/SudachiPy) with SudachiDict_core-20191224 and MeCab with UniDic-qkana_1603
 
-* [`BERT-base_aozora_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1MHbiF6k_5arRw_Bh9fPontmno4Pt7BCE)
-* [`BERT-base_aozora_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1WOPW4r5KpNi_EdMbO8A1Siws_5WkeyT-)
+* 1.4M steps: [`BERT-base_aozora_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1MHbiF6k_5arRw_Bh9fPontmno4Pt7BCE)
+* 2M steps: [`BERT-base_aozora_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1WOPW4r5KpNi_EdMbO8A1Siws_5WkeyT-)
 
 ### Trained on Aozora Bunko (6M) and Japanese Wikipedia (1.5M)
 
 #### Pre-tokenized by MeCab with unidic-cwj-2.3.0 and UniDic-qkana_1603
 
-* [`BERT-base_aozora-jawiki1.5m_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1feLRNIRm2R9h5rS4ibnWyTAScIDhyVhE)
-* [`BERT-base_aozora-jawiki1.5m_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1F1JSNZKMi1ofnbSCYQW06qI8cTlXVW1k)
+* 1.4M steps: [`BERT-base_aozora-jawiki1.5m_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1feLRNIRm2R9h5rS4ibnWyTAScIDhyVhE)
+* 2M steps: [`BERT-base_aozora-jawiki1.5m_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1F1JSNZKMi1ofnbSCYQW06qI8cTlXVW1k)
 
 #### Pre-tokenized by SudachiPy with SudachiDict_core-20191224 and MeCab with UniDic-qkana_1603
 
-* [`BERT-base_aozora-jawiki1.5m_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1wC1DAEV-kpFrxBUEcQq4sLiWFDwbn0LZ)
-* [`BERT-base_aozora-jawiki1.5m_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1UZeKEHyTXugCw2eIUZV2JX7Ax6gdfmqc)
+* 1.4M steps: [`BERT-base_aozora-jawiki1.5m_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1wC1DAEV-kpFrxBUEcQq4sLiWFDwbn0LZ)
+* 2M steps: [`BERT-base_aozora-jawiki1.5m_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1UZeKEHyTXugCw2eIUZV2JX7Ax6gdfmqc)
 
 ### Trained on Aozora Bunko (6M) and Japanese Wikipedia (3M)
 
 #### Pre-tokenized by MeCab with unidic-cwj-2.3.0 and UniDic-qkana_1603
 
-* [`BERT-base_aozora-jawiki3m_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1P3wJ48SYfXK6JnXlxz3BOk-kEHXPQqj1)
-* [`BERT-base_aozora-jawiki3m_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=15QzuCIqlxn5ijNQM2toBzIp4njsKqaWT)
+* 1.4M steps: [`BERT-base_aozora-jawiki3m_unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1P3wJ48SYfXK6JnXlxz3BOk-kEHXPQqj1)
+* 2M steps: [`BERT-base_aozora-jawiki3m_unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=15QzuCIqlxn5ijNQM2toBzIp4njsKqaWT)
 
 #### Pre-tokenized by SudachiPy with SudachiDict_core-20191224 and MeCab with UniDic-qkana_1603
 
-* [`BERT-base_aozora-jawiki3m_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1h19-o4fLmUFFDM5V8Tel1jcxCLX8yPgy)
-* [`BERT-base_aozora-jawiki3m_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1mv3UXOGWYztGlaYnAc0bm9RAlcv6g3i1)
+* 1.4M steps: [`BERT-base_aozora-jawiki3m_sudachipy-unidic_bpe-32k_1.4m.tar.xz`](https://drive.google.com/open?id=1h19-o4fLmUFFDM5V8Tel1jcxCLX8yPgy)
+* 2M steps: [`BERT-base_aozora-jawiki3m_sudachipy-unidic_bpe-32k_2m.tar.xz`](https://drive.google.com/open?id=1mv3UXOGWYztGlaYnAc0bm9RAlcv6g3i1)
 
 # Details of corpora
 
