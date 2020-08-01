@@ -81,4 +81,4 @@ After pre-tokenization, we concatenate texts of Aozora Bunko and random sampled 
 We assume that contemporary kana spelling is used.
 
 #### Aozora Bunko
-`index_pages/list_person_all_extended_utf8.zip` has `文字遣い種別` column that is the information of kanji (`旧字` or `新字`) and kana spelling (`旧仮名` or `新仮名`). We use this kana spelling information.
+`index_pages/list_person_all_extended_utf8.zip` has `文字遣い種別` column that is the information of kanji (`旧字` or `新字`) and kana spelling (`旧仮名` or `新仮名`). We use only kana spelling information.
