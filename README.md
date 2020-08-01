@@ -6,16 +6,17 @@ This is a repository of Japanese BERT trained on [Aozora Bunko](https://www.aozo
 
 * We provide models trained on Aozora Bunko. We used works written both in contemporary Japanese kana spelling and in classical Japanese kana spelling.
 * Models trained on Aozora Bunko and Wikipedia are also available.
-* We trained models with different pre-tokenization methods (MeCab with UniDic, SudachiPy).
-* All models are trained with the same configuration as the [bert-japanese](https://github.com/yoheikikuta/bert-japanese) (except for tokenization). We also provide models with 2M training steps.
+* We trained models by applying different pre-tokenization methods (MeCab with UniDic and SudachiPy).
+* All models are trained with the same configuration as the [bert-japanese](https://github.com/yoheikikuta/bert-japanese) (except for tokenization. bert-japanese uses SentencePiece unigram language model without pre-tokenization).
+* We provide models with 2M training steps.
 
 # Pretrained models
 
 If you want to use models with [🤗 Transformers](https://github.com/huggingface/transformers), see [Converting Tensorflow Checkpoints](https://huggingface.co/transformers/converting_tensorflow_models.html).
 
-When you use models with pre-tokenization, you will have to pre-tokenize datasets with the same morphological analyzer and the dictionary.
+When you use models, you will have to pre-tokenize datasets with the same morphological analyzer and the dictionary.
 
-When you do fine-tuning tasks, you may want to modify codes. [BERT日本語Pretrainedモデル - KUROHASHI-KAWAHARA LAB](http://nlp.ist.i.kyoto-u.ac.jp/index.php?BERT%E6%97%A5%E6%9C%AC%E8%AA%9EPretrained%E3%83%A2%E3%83%87%E3%83%AB) will help you out.
+When you do fine-tuning tasks, you may want to modify official BERT codes or Transformers codes. [BERT日本語Pretrainedモデル - KUROHASHI-KAWAHARA LAB](http://nlp.ist.i.kyoto-u.ac.jp/index.php?BERT%E6%97%A5%E6%9C%AC%E8%AA%9EPretrained%E3%83%A2%E3%83%87%E3%83%AB) will help you out.
 
 ## BERT-base
 
@@ -60,10 +61,24 @@ After pre-tokenization, texts are tokenized by [subword-nmt](https://github.com/
 
 * Aozora Bunko: Git repository as of 2019-04-21
     * `git clone https://github.com/aozorabunko/aozorabunko` and `git checkout 1e3295f447ff9b82f60f4133636a73cf8998aeee`.
-    * We removed text files with a copyright flag. You can identify them with `index_pages/list_person_all_extended_utf8.zip`.
+    * We removed text files with `作品著作権フラグ` = `あり` in `index_pages/list_person_all_extended_utf8.zip`.
 * Wikipedia (Japanese): XML dump as of 2018-12-20
     * You can get the archive from the [download page of bert-japanese](https://drive.google.com/drive/folders/1Zsm9DD40lrUVu6iAnIuTH2ODIkh-WM-O?usp=sharing).
 
 # Details of pretraining
 
-coming soon
+## Pre-tokenization
+
+For each document, we identify kana spelling method and then pre-tokenize by using morphological analyzer with the dictionary associated with the spelling, i.e. unidic-cwj or SudachiDict-core is used for contemporary kana spelling, unidic-qkana is used for classical kana spelling.
+
+In SudachiPy, we use split mode A (`$ sudachipy -m A -a file`) because [it's equivalent to short unit word (SUW) in UniDic](https://github.com/WorksApplications/Sudachi#the-modes-of-splitting) and unidic-cwj and unidic-qkana have only SUW mode.
+
+After pre-tokenization, we concatenate texts of Aozora Bunko and random sampled Wikipedia (or only Aozora Bunko), and get vocabulary by using subword-nmt.
+
+### Identifying kana spelling
+
+#### Wikipedia
+We assume that contemporary kana spelling is used.
+
+#### Aozora Bunko
+`index_pages/list_person_all_extended_utf8.zip` has `文字遣い種別` column that is the information of kanji (`旧字` or `新字`) and kana spelling (`旧仮名` or `新仮名`). We use this kana spelling information.
